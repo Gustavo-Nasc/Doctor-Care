@@ -1,0 +1,122 @@
+/*==== ROOT CONFIG ====*/
+:root {
+    --hue-color: 170;
+    --brand-green: hsl(var(--hue-color), 100%, 26%);
+    --brand-green-light: hsl(calc(var(--hue-color) - 22), 23%, 89%);
+    --brand-green-light-02: hsl(calc(var(--hue-color) + 10), 14%, 97%);
+    --brand-beige: hsl(calc(var(--hue-color) - 131), 100%, 97%);
+    ;
+    --brand-green-hover: hsl(var(--hue-color), 100%, 14%);
+
+    --gray-headline: hsl(calc(var(--hue-color) + 40), 11%, 15%);
+    --gray-paragraph: hsl(calc(var(--hue-color) + 40), 9%, 31%);
+    --white: hsl(0, 0%, 93%);
+}
+
+/*==== GLOBAL ====*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--brand-green-light-02);
+}
+
+a {
+    text-decoration: none;
+}
+
+/*====NAV====*/
+.nav-container {
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--brand-green-light);
+    padding: 0 1.5rem;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    text-align: center;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    color: black;
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+}
+
+.nav-logo b {
+    font-weight: 700;
+    color: var(--brand-green);
+}
+
+.nav-links {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: var(--brand-green);
+    padding: 0.5rem 0;
+    transition: 0.3s;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.nav-link:hover {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.scheduling-link {
+    border: 1.5px solid var(--brand-green);
+    outline: none;
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+    color: var(--brand-green);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.scheduling-link:hover {
+    background-color: var(--brand-green);
+    color: var(--white);
+}
+
+/*==== MAIN ====*/
+main {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+/*==== GLOBAL MAIN ====*/
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+/*==== HOME ====*/
+
+/*==== ABOUT ====*/
+
+/*==== SERVICES ====*/
+
+/*==== PROFESSIONALS ====*/
+
+/*==== TESTIMONIAL ====*/
