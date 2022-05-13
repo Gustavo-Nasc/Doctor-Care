@@ -1,6 +1,6 @@
 /*==== ROOT CONFIG ====*/
 :root {
-    --hue-color: 170;
+    --hue-color: 180;
     --brand-green: hsl(var(--hue-color), 100%, 26%);
     --brand-green-light: hsl(calc(var(--hue-color) - 22), 23%, 89%);
     --brand-green-light-02: hsl(calc(var(--hue-color) + 10), 14%, 97%);
@@ -11,6 +11,9 @@
     --gray-headline: hsl(calc(var(--hue-color) + 40), 11%, 15%);
     --gray-paragraph: hsl(calc(var(--hue-color) + 40), 9%, 31%);
     --white: hsl(0, 0%, 93%);
+
+    --regular: 400;
+    --bold: 700;
 }
 
 /*==== GLOBAL ====*/
@@ -31,7 +34,7 @@ body {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     background-color: var(--brand-green-light-02);
 }
 
@@ -44,58 +47,60 @@ a {
     display: grid;
     align-items: center;
     justify-content: space-around;
-    background-color: var(--brand-green-light);
+    background-color: var(--brand-green);
     padding: 0 1.5rem;
-    position: absolute;
+    position: fixed;
     right: 0;
-    height: 100%;
+    height: 100vh;
     text-align: center;
+    z-index: 999;
+    width: 12.5vw;
 }
 
 .nav-logo {
     font-size: 1.5rem;
-    color: black;
+    color: var(--white);
     letter-spacing: 0.05rem;
-    font-weight: 500;
+    font-weight: var(--regular);
 }
 
 .nav-logo b {
-    font-weight: 700;
-    color: var(--brand-green);
+    font-weight: var(--bold);
 }
 
 .nav-links {
     display: grid;
     gap: 1.5rem;
+    text-align: center;
 }
 
 .nav-link {
-    color: var(--brand-green);
+    color: var(--white);
     padding: 0.5rem 0;
     transition: 0.3s;
     text-align: center;
-    font-weight: 400;
+    font-weight: regular;
     font-size: 1.5rem;
 }
 
 .nav-link:hover {
-    font-weight: 600;
     font-size: 2rem;
 }
 
 .scheduling-link {
-    border: 1.5px solid var(--brand-green);
+    border: 2px solid var(--white);
     outline: none;
     border-radius: 2rem;
-    padding: 0.5rem 2rem;
-    color: var(--brand-green);
-    font-weight: 500;
+    padding: 0.5rem 1rem;
+    color: var(--white);
     transition: 0.3s;
+    width: max-content;
+    font-size: 2rem;
 }
 
 .scheduling-link:hover {
-    background-color: var(--brand-green);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--brand-green);
 }
 
 /*==== MAIN ====*/
@@ -103,15 +108,118 @@ main {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
+    width: 87.5vw;
 }
 
 /*==== GLOBAL MAIN ====*/
 section {
     height: 100vh;
     scroll-snap-align: start;
+    display: grid;
+    align-items: center;
+}
+
+.wrapper {
+    padding: 0 8.25rem;
 }
 
 /*==== HOME ====*/
+#home {
+    background-color: var(--brand-green-light);
+    height: 100vh;
+}
+
+.wrapper-home {
+    display: flex;
+    align-items: center;
+    height: 67.5vh;
+}
+
+.wrapper-home div {
+    width: 50%;
+}
+
+.home-informations {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.home-title {
+    font-size: 0.875rem;
+    color: var(--brand-green);
+    font-weight: var(--bold);
+}
+
+.home-subtitle {
+    font-size: 3rem;
+    color: var(--gray-headline);
+}
+
+.home-text {
+    font-size: 1rem;
+    color: var(--gray-paragraph);
+}
+
+.home-link {
+    width: max-content;
+    background-color: var(--brand-green);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    border-radius: 5rem;
+    font-weight: var(--bold);
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.home-link:hover {
+    background-color: var(--brand-green-hover)
+}
+
+.home-link-icon {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.home-img-div {
+    text-align: center;
+}
+
+.home-img {
+    width: 25rem;
+    margin-bottom: -6rem;
+}
+
+.home-stats {
+    background-color: var(--brand-beige);
+    height: 32.5vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-stats div {
+    margin: 0 3rem;
+}
+
+.home-stats-title {
+    font-size: 3rem;
+    font-weight: var(--bold);
+    color: var(--gray-headline);
+}
+
+.home-stats-description {
+    font-size: 1.25rem;
+    color: var(--brand-green);
+    font-weight: var(--regular);
+}
+
+.separator {
+    width: 1px;
+    background-color: var(--brand-green);
+    height: 2rem;
+}
 
 /*==== ABOUT ====*/
 
@@ -120,3 +228,8 @@ section {
 /*==== PROFESSIONALS ====*/
 
 /*==== TESTIMONIAL ====*/
+
+/*==== SCROLLBAR ====*/
+::-webkit-scrollbar {
+    width: 0;
+}

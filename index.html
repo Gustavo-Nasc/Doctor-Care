@@ -13,34 +13,77 @@
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- UNICONS -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 
 <body>
-    <header>
+    <main>
         <nav class="nav-container">
             <a href="#home" class="nav-logo">Doctor<br><b>Care</b></a>
 
             <div class="nav-links">
-                <a href="#home" class="nav-link"><i class="uil uil-estate nav-link-icon"></i></a>
-                <a href="#about" class="nav-link"><i class="uil uil-comment-info nav-link-icon"></i></a>
-                <a href="#services" class="nav-link"><i class="uil uil-bag-alt nav-link-icon"></i></a>
-                <a href="#professionals" class="nav-link"><i class="uil uil-user-md nav-link-icon"></i></a>
-                <a href="#testimonial" class="nav-link"><i class="uil uil-comment-alt-dots nav-link-icon"></i></a>
+                <a href="#home" class="nav-link">
+                    <i class="fa-solid fa-house nav-link-icon"></i>
+                </a>
+                <a href="#about" class="nav-link">
+                    <i class="fa-solid fa-circle-info nav-link-icon"></i>
+                </a>
+                <a href="#services" class="nav-link">
+                    <i class="fa-solid fa-briefcase-medical nav-link-icon"></i>
+                </a>
+                <a href="#professionals" class="nav-link">
+                    <i class="fa-solid fa-user-nurse nav-link-icon"></i>
+                </a>
+                <a href="#testimonial" class="nav-link">
+                    <i class="fa-solid fa-comment-dots nav-link-icon"></i>
+                </a>
             </div>
 
-            <a href="#contact" class="scheduling-link">AGENDE SUA<br>CONSULTA</a>
+            <div class="nav-contact">
+                <a href="#contact" class="scheduling-link">
+                    <i class="fa-solid fa-calendar-day"></i>
+                </a>
+            </div>
         </nav>
-    </header>
-
-    <main>
         <section id="home">
-            a
+            <div class="wrapper wrapper-home">
+                <div class="home-informations">
+                    <h5 class="home-title">BOAS-VINDAS A DOCTORCARE 👋</h5>
+                    <h1 class="home-subtitle">Assistência médica simplificada para todos</h1>
+                    <p class="home-text">
+                        Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e
+                        proporcionar uma
+                        cura a longo prazo.
+                    </p>
+                    <a href="#contact" class="home-link">
+                        <i class="fa-brands fa-whatsapp home-link-icon"></i>
+                        AGENDE SUA CONSULTA
+                    </a>
+                </div>
+                <div class="home-img-div">
+                    <img src="./assets/images/mulher-negra-com-moleton-verde-com-as-duas-maos-no-peito.png"
+                        alt="Mulher Negra com Moletom Verde e com as duas mãos no peito" class="home-img">
+                </div>
+            </div>
+            <div class="home-stats">
+                <div>
+                    <h1 class="home-stats-title">+3.500</h1>
+                    <h1 class="home-stats-description">Pacientes atendidos</h1>
+                </div>
+                <div class="separator"></div>
+                <div>
+                    <h1 class="home-stats-title">+15</h1>
+                    <h1 class="home-stats-description">Especialistas disponíveis</h1>
+                </div>
+                <div class="separator"></div>
+                <div>
+                    <h1 class="home-stats-title">+10</h1>
+                    <h1 class="home-stats-description">Anos no mercado</h1>
+                </div>
+            </div>
         </section>
         <section id="about">
             a
@@ -54,11 +97,17 @@
         <section id="testimonial">
             a
         </section>
+        <section id="contact">
+            a
+        </section>
     </main>
 
     <!-- SCROLL REVEAL -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./assets/js/scrollreveal.js"></script>
+
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/cddd7554c0.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
