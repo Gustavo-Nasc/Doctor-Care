@@ -1,12 +1,12 @@
 /*==== ROOT CONFIG ====*/
 :root {
     --hue-color: 180;
-    --brand-green: hsl(var(--hue-color), 100%, 26%);
-    --brand-green-light: hsl(calc(var(--hue-color) - 22), 23%, 89%);
-    --brand-green-light-02: hsl(calc(var(--hue-color) + 10), 14%, 97%);
+    --brand: hsl(var(--hue-color), 100%, 26%);
+    --brand-light: hsl(calc(var(--hue-color) - 22), 23%, 89%);
+    --brand-light-02: hsl(calc(var(--hue-color) + 10), 14%, 97%);
     --brand-beige: hsl(calc(var(--hue-color) - 131), 100%, 97%);
     ;
-    --brand-green-hover: hsl(var(--hue-color), 100%, 14%);
+    --brand-hover: hsl(var(--hue-color), 100%, 14%);
 
     --gray-headline: hsl(calc(var(--hue-color) + 40), 11%, 15%);
     --gray-paragraph: hsl(calc(var(--hue-color) + 40), 9%, 31%);
@@ -14,6 +14,8 @@
 
     --regular: 400;
     --bold: 700;
+
+    --scroll-bar-bg: hsl(var(--hue-color), 10%, 80%);
 }
 
 /*==== GLOBAL ====*/
@@ -27,15 +29,9 @@ html {
     scroll-behavior: smooth;
 }
 
-html,
-body {
-    width: 100%;
-    height: 100%;
-}
-
 body {
     font-family: 'DM Sans', sans-serif;
-    background-color: var(--brand-green-light-02);
+    background-color: var(--brand-light-02);
 }
 
 a {
@@ -44,17 +40,12 @@ a {
 
 /*====NAV====*/
 .nav-container {
-    display: grid;
     align-items: center;
     justify-content: space-around;
-    background-color: var(--brand-green);
-    padding: 0 1.5rem;
-    position: fixed;
-    right: 0;
-    height: 100vh;
+    background-color: var(--brand);
     text-align: center;
     z-index: 999;
-    width: 12.5vw;
+    padding: 0 1.5rem;
 }
 
 .nav-logo {
@@ -87,22 +78,6 @@ a {
     font-size: 2rem;
 }
 
-.scheduling-link {
-    border: 2px solid var(--white);
-    outline: none;
-    border-radius: 2rem;
-    padding: 0.5rem 1rem;
-    color: var(--white);
-    transition: 0.3s;
-    width: max-content;
-    font-size: 2rem;
-}
-
-.scheduling-link:hover {
-    background-color: var(--white);
-    color: var(--brand-green);
-}
-
 /*==== MAIN ====*/
 main {
     scroll-snap-type: y mandatory;
@@ -113,10 +88,9 @@ main {
 
 /*==== GLOBAL MAIN ====*/
 section {
-    height: 100vh;
+    height: 100%;
     scroll-snap-align: start;
     display: grid;
-    align-items: center;
 }
 
 .wrapper {
@@ -125,14 +99,12 @@ section {
 
 /*==== HOME ====*/
 #home {
-    background-color: var(--brand-green-light);
-    height: 100vh;
+    background-color: var(--brand-light);
 }
 
 .wrapper-home {
     display: flex;
     align-items: center;
-    height: 67.5vh;
 }
 
 .wrapper-home div {
@@ -146,7 +118,7 @@ section {
 
 .home-title {
     font-size: 0.875rem;
-    color: var(--brand-green);
+    color: var(--brand);
     font-weight: var(--bold);
 }
 
@@ -162,7 +134,7 @@ section {
 
 .home-link {
     width: max-content;
-    background-color: var(--brand-green);
+    background-color: var(--brand);
     color: var(--white);
     padding: 1rem 1.5rem;
     border-radius: 5rem;
@@ -173,7 +145,7 @@ section {
 }
 
 .home-link:hover {
-    background-color: var(--brand-green-hover)
+    background-color: var(--brand-hover)
 }
 
 .home-link-icon {
@@ -182,25 +154,23 @@ section {
 }
 
 .home-img-div {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
 }
 
 .home-img {
     width: 25rem;
-    margin-bottom: -6rem;
 }
 
 .home-stats {
     background-color: var(--brand-beige);
-    height: 32.5vh;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-}
-
-.home-stats div {
-    margin: 0 3rem;
+    gap: 1.5rem;
 }
 
 .home-stats-title {
@@ -211,13 +181,13 @@ section {
 
 .home-stats-description {
     font-size: 1.25rem;
-    color: var(--brand-green);
+    color: var(--brand);
     font-weight: var(--regular);
 }
 
 .separator {
     width: 1px;
-    background-color: var(--brand-green);
+    background-color: var(--brand);
     height: 2rem;
 }
 
@@ -231,5 +201,191 @@ section {
 
 /*==== SCROLLBAR ====*/
 ::-webkit-scrollbar {
-    width: 0;
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--scroll-bar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(34, 37, 42, 0.4);
+    border: 3px solid var(--scroll-bar-bg);
+    border-radius: 10px;
+}
+
+/*RESPONSIVENESS*/
+@media screen and (max-width: 1100px) {
+    .nav-container {
+        display: flex;
+        width: 100%;
+        left: 0;
+        height: 10vh;
+    }
+
+    .nav-logo {
+        font-size: 1.25rem;
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+    .nav-link {
+        font-size: 1.25rem;
+    }
+
+    main {
+        height: 90vh;
+        width: 100vw;
+    }
+
+    .home-subtitle {
+        font-size: 2rem;
+    }
+
+    .home-img {
+        width: 20rem;
+    }
+}
+
+@media screen and (min-width: 1101px) {
+    .nav-container {
+        position: fixed;
+        display: grid;
+        right: 0;
+        height: 100vh;
+        width: 12.5vw;
+    }
+}
+
+/*Large Devices*/
+@media screen and (max-width: 1024px) {
+    .home-img {
+        width: 22.5rem;
+    }
+
+    .home-subtitle {
+        font-size: 2rem;
+    }
+
+    .home-stats-title {
+        font-size: 2.5rem;
+    }
+
+    .home-stats-description {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 904px) {
+    .wrapper {
+        padding: 0 6.5rem;
+    }
+
+    .home-subtitle {
+        font-size: 1.85rem;
+    }
+}
+
+/*Medium Devices*/
+@media screen and (max-width: 864px) {
+    .wrapper {
+        padding: 0 5rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper {
+        padding: 0 3.5rem;
+    }
+
+    .home-img {
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width: 712px) {
+    .home-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .home-img {
+        width: 18.5rem;
+    }
+}
+
+@media screen and (max-width: 688px) {
+    .home-img {
+        width: 15rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav-logo {
+        font-size: 1rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .nav-link:hover {
+        font-size: 1.5rem;
+    }
+
+    main {
+        scroll-snap-type: none;
+        overflow-y: none;
+    }
+
+    section {
+        height: max-content;
+        padding-top: 2.5rem;
+    }
+
+    .wrapper-home {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    .wrapper-home div {
+        width: 100%;
+    }
+
+    .home-img {
+        width: 20rem;
+    }
+
+    .home-stats {
+        display: none;
+    }
+}
+
+/*Small Devices*/
+@media screen and (max-width: 521px) {
+
+    .home-img {
+        width: 18.5rem;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .wrapper {
+        padding: 0 2rem;
+    }
+
+    .home-img {
+        width: 17.5rem;
+    }
+}
+
+@media screen and (max-width: 353px) {
+    .wrapper {
+        padding: 0 1rem;
+    }
+
+    .home-img {
+        width: 15rem;
+    }
 }
