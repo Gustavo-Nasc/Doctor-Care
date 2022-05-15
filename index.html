@@ -28,43 +28,47 @@
                 <a href="#home" class="nav-link">
                     <i class="fa-solid fa-house nav-link-icon"></i>
                 </a>
-                <a href="#about" class="nav-link">
-                    <i class="fa-solid fa-circle-info nav-link-icon"></i>
-                </a>
                 <a href="#services" class="nav-link">
                     <i class="fa-solid fa-briefcase-medical nav-link-icon"></i>
+                </a>
+                <a href="#about" class="nav-link">
+                    <i class="fa-solid fa-circle-info nav-link-icon"></i>
                 </a>
                 <a href="#professionals" class="nav-link">
                     <i class="fa-solid fa-user-nurse nav-link-icon"></i>
                 </a>
-                <a href="#testimonial" class="nav-link">
-                    <i class="fa-solid fa-comment-dots nav-link-icon"></i>
+            </div>
+
+            <div>
+                <a href="#contact" id="schedule">
+                    <i class="fa-solid fa-calendar-day"></i>
                 </a>
             </div>
         </nav>
     </header>
     <main>
         <section id="home">
-            <div class="wrapper wrapper-home">
-                <div class="home-informations">
-                    <h5 class="home-title">BOAS-VINDAS A DOCTORCARE 👋</h5>
-                    <h1 class="home-subtitle">Assistência médica simplificada para todos</h1>
-                    <p class="home-text">
+            <div class="wrapper wrapper-section">
+                <div class="section-informations">
+                    <h5 class="section-title" id="home-title">BOAS-VINDAS A DOCTORCARE 👋</h5>
+                    <h1 class="section-subtitle" id="home-subtitle">Assistência médica simplificada para todos</h1>
+                    <p class="section-text" id="home-text">
                         Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e
                         proporcionar uma
                         cura a longo prazo.
                     </p>
-                    <a href="#contact" class="home-link">
+                    <a href="#contact" class="home-link" id="home-link">
                         <i class="fa-brands fa-whatsapp home-link-icon"></i>
                         AGENDE SUA CONSULTA
                     </a>
                 </div>
                 <div class="home-img-div">
                     <img src="./assets/images/mulher-negra-com-moleton-verde-com-as-duas-maos-no-peito.png"
-                        alt="Mulher Negra com Moletom Verde e com as duas mãos no peito" class="home-img">
+                        alt="Mulher Negra com Moletom Verde e com as duas mãos no peito" class="section-img"
+                        id="home-img">
                 </div>
             </div>
-            <div class="home-stats">
+            <div class="home-stats" id="home-stats">
                 <div>
                     <h1 class="home-stats-title">+3.500</h1>
                     <h1 class="home-stats-description">Pacientes atendidos</h1>
@@ -81,17 +85,117 @@
                 </div>
             </div>
         </section>
-        <section id="about">
-            a
-        </section>
         <section id="services">
-            a
+            <h5 class="section-title">SERVIÇOS</h5>
+            <h1 class="section-subtitle">
+                Como podemos ajudá-lo <br>a se sentir melhor?
+            </h1>
+            <div class="services-informations">
+                <div class="services-information">
+                    <i class="fa-solid fa-circle-check services-information-icon"></i>
+                    <h3 class="services-information-title">Problemas Digestivos</h3>
+                    <p class="services-information-description">
+                        Envolvem uma variedade de sintomas como perda de peso sem razão aparente, entre outros.
+                    </p>
+                </div>
+                <div class="services-information">
+                    <i class="fa-solid fa-circle-check services-information-icon"></i>
+                    <h3 class="services-information-title">Saúde Hormonal</h3>
+                    <p class="services-information-description">
+                        São muito comuns e podem provocar vários sintomas como excesso de fome, irritabilidade, cansaço
+                        excessivo.
+                    </p>
+                </div>
+                <div class="services-information">
+                    <i class="fa-solid fa-circle-check services-information-icon"></i>
+                    <h3 class="services-information-title">Bem-estar mental</h3>
+                    <p class="services-information-description">
+                        Consiste em sentir-se bem consigo e conviver em paz com outras pessoas mesmo que algo ruim
+                        aconteça.
+                    </p>
+                </div>
+                <div class="services-information">
+                    <i class="fa-solid fa-circle-check services-information-icon"></i>
+                    <h3 class="services-information-title">Cuidados Pediátricos</h3>
+                    <p class="services-information-description">
+                        Devem ser iniciados no diagnóstico, independentemente do tratamento da doença de base.
+                    </p>
+                </div>
+                <div class="services-information">
+                    <i class="fa-solid fa-circle-check services-information-icon"></i>
+                    <h3 class="services-information-title">Autoimune e inflamação</h3>
+                    <p class="services-information-description">
+                        Mau funcionamento do sistema imunológico, levando o corpo a atacar os seus próprios tecidos.
+                    </p>
+                </div>
+                <div class="services-information">
+                    <i class="fa-solid fa-circle-check services-information-icon"></i>
+                    <h3 class="services-information-title">Saúde do coração</h3>
+                    <p class="services-information-description">
+                        O coração pode estar fazendo um esforço maior do que o normal para o sangue circular.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <div class="wrapper wrapper-section" id="wrapper-about">
+                <div class="about-img-div">
+                    <img src="./assets/images/doutor-feliz-segurando-prancheta-com-pacientes.png"
+                        alt="Doutor feliz segurando prancheta com pacientes" class="about-img">
+                </div>
+                <div class="section-informations" id="about-informations">
+                    <h5 class="section-title" id="services-title">SOBRE NÓS</h5>
+                    <h1 class="section-subtitle" id="services-subtitle">Entenda quem somos <br>e por que existimos</h1>
+                    <p class="section-text">
+                        A DoctorCare surgiu com a missão e o propósito de ajudar você e milhares de pessoas com o
+                        tratamento de Cuidados Paliativos, definidos pela OMS em 1990 e atualizado em 2002.
+                    </p>
+                </div>
+            </div>
         </section>
         <section id="professionals">
-            a
-        </section>
-        <section id="testimonial">
-            a
+            <h5 class="section-title">ESPECIALIDADES</h5>
+            <h1 class="section-subtitle">Conheça as nossas Especialidades</h1>
+            <div class="professionals-informations">
+                <div class="professionals-information">
+                    <img src="./assets/images/doutor-clinico-geral-com-fundo-de-hospital.jpg"
+                        alt="Doutor Clínico Geral em Sala de Hospital" class="professional-information-img">
+                    <div class="professionals-information-text">
+                        <h3 class="professionals-title">Clínico Geral</h3>
+                        <p class="professionals-description">
+                            O clínico geral é um profissional da medicina com um vasto conhecimento geral sobre o
+                            funcionamento do
+                            corpo humano, sendo responsável por
+                            servir as pessoas, ajudando-as na prevenção e cura de doenças.
+                        </p>
+                    </div>
+                </div>
+                <div class="professionals-information">
+                    <img src="./assets/images/doutora-pediatra-brincando-com-crianca.jpg"
+                        alt="Doutor Clínico Geral em Sala de Hospital" class="professional-information-img">
+                    <div class="professionals-information-text">
+                        <h3 class="professionals-title">Pediatria</h3>
+                        <p class="professionals-description">
+                            Sua atuação abrange aspectos curativos, preventivos e de pesquisa. O pediatra, além de
+                            tratar da
+                            saúde infantil, pode orientar as famílias sobre sobre questões como alimentação, aleitamento
+                            materno, vacinação e prevenção de acidentes.
+                        </p>
+                    </div>
+                </div>
+                <div class="professionals-information">
+                    <img src="./assets/images/doutor-negro-geriatra-cuidando-de-paciente-idoso.jpg"
+                        alt="Doutor Clínico Geral em Sala de Hospital" class="professional-information-img">
+                    <div class="professionals-information-text">
+                        <h3 class="professionals-title">Geriatria</h3>
+                        <p class="professionals-description">
+                            A geriatria trata do envelhecimento humano. A especialidade tem o objetivo de prevenir
+                            doenças e
+                            promover uma boa qualidade de vida ao longo do envelhecimento.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="contact">
             a
