@@ -1,6 +1,6 @@
 /*==== ROOT CONFIG ====*/
 :root {
-    --hue-color: 160;
+    --hue-color: 170;
     --brand: hsl(var(--hue-color), 100%, 26%);
     --brand-light: hsl(calc(var(--hue-color) - 22), 23%, 89%);
     --brand-light-02: hsl(calc(var(--hue-color) + 10), 14%, 97%);
@@ -36,6 +36,11 @@ body {
 
 a {
     text-decoration: none;
+    color: var(--brand);
+}
+
+p {
+    color: var(--gray-paragraph);
 }
 
 /*====NAV====*/
@@ -148,23 +153,23 @@ section {
     color: var(--gray-paragraph);
 }
 
-.home-link {
+.whatsapp-link {
     width: max-content;
     background-color: var(--brand);
     color: var(--white);
     padding: 1rem 1.5rem;
-    border-radius: 5rem;
     font-weight: var(--bold);
     display: flex;
     align-items: center;
     transition: 0.3s;
+    border-radius: 5rem;
 }
 
 .home-link:hover {
     background-color: var(--brand-hover)
 }
 
-.home-link-icon {
+.whatsapp-link-icon {
     margin-right: 1rem;
     font-size: 1.5rem;
 }
@@ -231,7 +236,7 @@ section {
 }
 
 .services-information {
-    background-color: white;
+    background-color: var(--white);
     padding: 1.5rem;
     text-align: left;
     display: grid;
@@ -277,7 +282,7 @@ section {
 
 .professionals-information {
     background-color: var(--white);
-    height: max-content;
+    height: 90%;
     display: grid;
     gap: 1rem;
     text-align: left;
@@ -293,7 +298,75 @@ section {
     width: 100%;
 }
 
-/*==== TESTIMONIAL ====*/
+/*==== CONTACT ====*/
+#contact {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.contact-informations {
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-information {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.contact-information div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.contact-information-icon {
+    width: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--brand);
+}
+
+.contact-img {
+    width: 35rem;
+}
+
+/*==== FOOTER ====*/
+footer {
+    height: 25vh;
+    background-color: var(--brand);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5rem;
+    align-items: center;
+    color: var(--white);
+}
+
+.footer-informations {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.footer-logo {
+    color: var(--white);
+    font-size: 2.5rem;
+}
+
+.footer-informations p+p {
+    color: var(--brand-beige);
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-link {
+    font-size: 1.5rem;
+}
 
 /*==== SCROLLBAR ====*/
 ::-webkit-scrollbar {
@@ -321,11 +394,19 @@ section {
     .about-img {
         width: 25rem;
     }
+
+    .contact-img {
+        width: 30rem;
+    }
 }
 
 @media screen and (max-width: 1150px) {
     .about-img {
         width: 20rem;
+    }
+
+    .contact-img {
+        width: 27.5rem;
     }
 }
 
@@ -349,6 +430,10 @@ section {
         font-size: 1.25rem;
     }
 
+    #schedule {
+        font-size: 1.25rem;
+    }
+
     main {
         height: 90vh;
         width: 100vw;
@@ -360,6 +445,14 @@ section {
 
     .section-img {
         width: 20rem;
+    }
+
+    #contact {
+        height: 70vh;
+    }
+
+    footer {
+        height: 20vh;
     }
 }
 
@@ -411,6 +504,10 @@ section {
     .wrapper {
         padding: 0 5rem;
     }
+
+    .contact-img {
+        width: 25rem;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -456,6 +553,7 @@ section {
     .professionals-information {
         display: flex;
         align-items: center;
+        height: max-content;
     }
 
     .professional-information-img {
@@ -466,11 +564,39 @@ section {
     .professionals-information-text {
         padding: 0.5rem;
     }
+
+    #contact {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .contact-informations {
+        align-self: flex-end;
+    }
+
+    .contact-img {
+        align-self: flex-start;
+    }
 }
 
 @media screen and (max-width: 688px) {
+    #contact {
+        height: 60vh;
+    }
+
     .section-img {
         width: 15rem;
+    }
+}
+
+@media screen and (max-width: 633px) {
+    footer {
+        display: grid;
+        height: 30vh;
+        gap: 2.5rem;
+        padding: 0.5rem 3.5rem;
     }
 }
 
@@ -544,6 +670,15 @@ section {
     .professionals-information-text {
         padding: 1.5rem;
     }
+
+    #contact {
+        height: max-content;
+    }
+
+    footer {
+        height: max-content;
+        padding: 2.5rem 3.5rem;
+    }
 }
 
 /*Small Devices*/
@@ -569,6 +704,20 @@ section {
     .home-stats {
         width: 90vw;
     }
+
+    .contact-img {
+        width: 22.5rem;
+    }
+}
+
+@media screen and (max-width: 393px) {
+    .contact-img {
+        width: 17.5rem;
+    }
+
+    footer {
+        padding: 2.5rem 1.5rem;
+    }
 }
 
 @media screen and (max-width: 353px) {
@@ -582,5 +731,17 @@ section {
 
     .about-img {
         width: 15rem;
+    }
+
+    .contact-img {
+        width: 16.5rem;
+    }
+
+    .whatsapp-link * {
+        font-size: 1rem;
+    }
+
+    .whatsapp-link-icon {
+        margin-right: 0.5rem;
     }
 }
