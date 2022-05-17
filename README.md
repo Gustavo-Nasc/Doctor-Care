@@ -1,12 +1,11 @@
 # DoctorCare
 
-![Preview](./preview.jpg)
+![Preview](./.github/preview.jpg)
 
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- Typescript
 - HTML5
 - CSS3
 - JavaScript

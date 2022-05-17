@@ -75,8 +75,12 @@ p {
     padding: 0.5rem 0;
     transition: 0.3s;
     text-align: center;
-    font-weight: regular;
+    font-weight: var(--regular);
     font-size: 1.5rem;
+}
+
+.nav-link .active-link {
+    font-size: 1.75rem;
 }
 
 .nav-link:hover {
@@ -181,7 +185,7 @@ section {
     height: 100%;
 }
 
-.section-img {
+.home-img {
     width: 25rem;
 }
 
@@ -264,10 +268,6 @@ section {
     order: 1;
 }
 
-.about-img {
-    width: 35rem;
-}
-
 /*==== PROFESSIONALS ====*/
 #professionals {
     background-color: var(--brand-light);
@@ -294,8 +294,9 @@ section {
     padding: 2rem;
 }
 
-.professional-information-img {
+.professionals-information-img {
     width: 100%;
+    height: max-content;
 }
 
 /*==== CONTACT ====*/
@@ -330,7 +331,7 @@ section {
     color: var(--brand);
 }
 
-.contact-img {
+.section-img {
     width: 35rem;
 }
 
@@ -366,6 +367,7 @@ footer {
 
 .footer-link {
     font-size: 1.5rem;
+    color: var(--white);
 }
 
 /*==== SCROLLBAR ====*/
@@ -384,28 +386,14 @@ footer {
 }
 
 /*RESPONSIVENESS*/
-@media screen and (max-width: 1600px) {
-    .about-img {
-        width: 30rem;
-    }
-}
-
 @media screen and (max-width: 1350px) {
-    .about-img {
-        width: 25rem;
-    }
-
-    .contact-img {
+    .section-img {
         width: 30rem;
     }
 }
 
 @media screen and (max-width: 1150px) {
-    .about-img {
-        width: 20rem;
-    }
-
-    .contact-img {
+    .section-img {
         width: 27.5rem;
     }
 }
@@ -443,7 +431,7 @@ footer {
         font-size: 2rem;
     }
 
-    .section-img {
+    .home-img {
         width: 20rem;
     }
 
@@ -468,7 +456,7 @@ footer {
 
 /*Large Devices*/
 @media screen and (max-width: 1024px) {
-    .section-img {
+    .home-img {
         width: 17.5rem;
     }
 
@@ -505,7 +493,7 @@ footer {
         padding: 0 5rem;
     }
 
-    .contact-img {
+    .section-img {
         width: 25rem;
     }
 }
@@ -515,7 +503,7 @@ footer {
         padding: 0 3.5rem;
     }
 
-    .section-img {
+    .home-img {
         width: 20rem;
     }
 }
@@ -525,7 +513,7 @@ footer {
         font-size: 1.5rem;
     }
 
-    .section-img {
+    .home-img {
         width: 18.5rem;
     }
 
@@ -540,10 +528,6 @@ footer {
     .about-img-div {
         order: 1;
         text-align: center;
-    }
-
-    .about-img {
-        width: 27.5rem;
     }
 
     .professionals-informations {
@@ -576,17 +560,13 @@ footer {
         align-self: flex-end;
     }
 
-    .contact-img {
+    .section-img {
         align-self: flex-start;
     }
 }
 
 @media screen and (max-width: 688px) {
-    #contact {
-        height: 60vh;
-    }
-
-    .section-img {
+    .home-img {
         width: 15rem;
     }
 }
@@ -683,12 +663,8 @@ footer {
 
 /*Small Devices*/
 @media screen and (max-width: 521px) {
-    .section-img {
+    .home-img {
         width: 18.5rem;
-    }
-
-    .about-img {
-        width: 20rem;
     }
 }
 
@@ -697,7 +673,7 @@ footer {
         padding: 0 2rem;
     }
 
-    .section-img {
+    .home-img {
         width: 17.5rem;
     }
 
@@ -705,13 +681,13 @@ footer {
         width: 90vw;
     }
 
-    .contact-img {
+    .section-img {
         width: 22.5rem;
     }
 }
 
 @media screen and (max-width: 393px) {
-    .contact-img {
+    .section-img {
         width: 17.5rem;
     }
 
@@ -725,15 +701,11 @@ footer {
         padding: 0 1rem;
     }
 
+    .home-img {
+        width: 15rem;
+    }
+
     .section-img {
-        width: 15rem;
-    }
-
-    .about-img {
-        width: 15rem;
-    }
-
-    .contact-img {
         width: 16.5rem;
     }
 
