@@ -1,6 +1,6 @@
 # DoctorCare
 <div align="center">
-    <img src="./.github/preview.jpg" width="80%">
+    <img src="./.github/preview.png" width="80%">
 </div>
 
 ## 🚀 Tecnologias
